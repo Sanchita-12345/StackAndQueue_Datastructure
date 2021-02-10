@@ -1,8 +1,21 @@
 package bridgelabz;
 
-public class MyStack{
-	public static void main(Sring args[]){
+public class MyStack {
 
-		System.out.println("Welcome to Stack And Queue Program");
-	}
+    private final MyLinkedList myLinkedList;
+
+    public MyStack(){
+        this.myLinkedList = new MyLinkedList();
+    }
+    public void push(INode myNode) {
+        myLinkedList.add(myNode);
+    }
+
+    public void printStack() {
+        myLinkedList.printMyNodes();
+    }
+
+    public INode peak() {
+        return myLinkedList.head;
+    }
 }
